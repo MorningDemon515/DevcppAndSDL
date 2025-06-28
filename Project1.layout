@@ -1,0 +1,72 @@
+[
+    {
+        "caretX": 1,
+        "caretY": 6,
+        "filename": "D:/_/Project1/src/Main.cpp",
+        "focused": false,
+        "isOpen": true,
+        "left": 0,
+        "order": 0,
+        "top": 60
+    },
+    {
+        "caretX": 1,
+        "caretY": 1,
+        "filename": "D:/_/Project1/src/stb_image.h",
+        "focused": false,
+        "isOpen": true,
+        "left": 0,
+        "order": 3,
+        "top": 0
+    },
+    {
+        "caretX": 11,
+        "caretY": 3,
+        "filename": "D:/_/Project1/src/Image.cpp",
+        "focused": false,
+        "isOpen": true,
+        "left": 0,
+        "order": 2,
+        "top": 0
+    },
+    {
+        "caretX": 68,
+        "caretY": 52,
+        "filename": "D:/_/Project1/src/Font_Text.h",
+        "focused": false,
+        "isOpen": true,
+        "left": 0,
+        "order": 6,
+        "top": 720
+    },
+    {
+        "caretX": 16,
+        "caretY": 39,
+        "filename": "D:/_/Project1/src/RenderCode.cpp",
+        "focused": true,
+        "isOpen": true,
+        "left": 0,
+        "order": 4,
+        "top": 300
+    },
+    {
+        "caretX": 68,
+        "caretY": 95,
+        "filename": "D:/_/Project1/src/Font_Text.cpp",
+        "focused": false,
+        "isOpen": true,
+        "left": 0,
+        "order": 5,
+        "top": 1440
+    },
+    {
+        "caretX": 1,
+        "caretY": 12,
+        "filename": "D:/_/Project1/src/Main.h",
+        "focused": false,
+        "isOpen": true,
+        "left": 0,
+        "order": 1,
+        "top": 0
+    }
+]

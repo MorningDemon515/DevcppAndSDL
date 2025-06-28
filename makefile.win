@@ -1,0 +1,46 @@
+# Project: Project1
+# Makefile created by Red Panda C++ 3.2.2958
+
+CXX      = "g++.exe"
+CC       = "gcc.exe"
+WINDRES  = "windres.exe"
+RM       = del /q /f
+CD       = cd /d
+LIBS     = "-Wl,--stack,12582912" "-lgraphics" "-luuid" "-lmsimg32" "-lgdi32" "-limm32" "-lole32" "-loleaut32" "-lwinmm" "-lgdiplus" "-lSDL2" "-lSDL2main" "-lSDL2_test"
+INCS     = 
+CXXINCS  = 
+CXXFLAGS = $(CXXINCS) "-g3" "-pipe" "-Wall" "-D_DEBUG"
+CFLAGS   = $(INCS) "-g3" "-pipe" "-Wall" "-D_DEBUG"
+WINDRESFLAGS = 
+RES      = Project1_private.res
+OBJ      = src\Main.o src\Image.o src\RenderCode.o src\Font_Text.o $(RES)
+BIN      = Project1.exe
+LINKOBJ  = "src\Main.o" "src\Image.o" "src\RenderCode.o" "src\Font_Text.o" "Project1_private.res"
+CLEANOBJ = "src\Main.o" "src\Image.o" "src\RenderCode.o" "src\Font_Text.o" "Project1_private.res" "Project1.exe"
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) >NUL 2>&1
+
+Project1.exe: $(OBJ)
+
+	$(CXX) $(LINKOBJ) -o "Project1.exe" $(LIBS)
+
+src\Main.o: src/Main.cpp src/Main.h
+	$(CXX) -c "src/Main.cpp" -o "src\Main.o" $(CXXFLAGS) 
+
+src\Image.o: src/Image.cpp src/stb_image.h
+	$(CXX) -c "src/Image.cpp" -o "src\Image.o" $(CXXFLAGS) 
+
+src\RenderCode.o: src/RenderCode.cpp src/Font_Text.h src/Main.h
+	$(CXX) -c "src/RenderCode.cpp" -o "src\RenderCode.o" $(CXXFLAGS)  -finput-charset=UTF-8 -fexec-charset=gbk
+
+src\Font_Text.o: src/Font_Text.cpp src/Font_Text.h src/Main.h
+	$(CXX) -c "src/Font_Text.cpp" -o "src\Font_Text.o" $(CXXFLAGS) 
+
+Project1_private.res: Project1_private.rc 
+	$(WINDRES) -i "Project1_private.rc" --input-format=rc -o "Project1_private.res" -O coff $(WINDRESFLAGS) 
+
